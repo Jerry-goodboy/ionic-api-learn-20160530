@@ -1,0 +1,187 @@
+
+<!-- <ion-view cache-view=true can-swipe-back=true hide-back-button=false hide-nav-bar=false view-title="Dashboard"> -->
+<ion-view > <!-- view-title="Dashboard" -->
+  <!-- ion-nav-buttons test
+  The side to place the buttons in the ionNavBar.
+  Available sides: primary, secondary, left, and right.
+  -->
+  <!-- <ion-nav-buttons side="primary">
+    <button class="button" ng-click="doSomething()">
+      I'm a button on the primary of the navbar!
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button" ng-click="doSomething()">
+      I'm a button on the secondary of the navbar!
+    </button>
+  </ion-nav-buttons> -->
+
+  <!-- ion-nav-title test -->
+  <ion-nav-title>
+    <img style="width:40px;" src="img/ionic.png">
+    Custom title
+  </ion-nav-title>
+
+  <ion-content class="padding" >
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <!-- <div class="list list-inset">
+      <div class="item" ng-repeat="item in itemsArr">
+      {{item}}
+      </div>
+    </div> -->
+
+    <!-- input types -->
+    <!-- text input -->
+    <label class="item item-input">
+      <span class="input-label">Username</span>
+      <input type="text">
+    </label>
+    <!-- email input -->
+    <label class="item item-input">
+      <span class="input-label">Email</span>
+      <input type="email">
+    </label>
+    <!-- tel input -->
+    <label class="item item-input">
+      <span class="input-label">Telephone</span>
+      <input type="tel">
+    </label>
+    <!-- search input -->
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="Search">
+    </label>
+    <!-- number input -->
+    <label class="item item-input">
+      <span class="input-label">Number</span>
+      <input type="number">
+    </label>
+    <!-- date input -->
+    <label class="item item-input">
+      <span class="input-label">Date</span>
+      <input type="date">
+    </label>
+    <!-- month input -->
+    <label class="item item-input">
+      <span class="input-label">Month</span>
+      <input type="month">
+    </label>
+    <!-- password input -->
+    <label class="item item-input">
+      <span class="input-label">Password</span>
+      <input type="password">
+    </label>
+
+    <ion-list>
+      <ion-item ng-repeat="item in itemsArr">{{item}}</ion-item>
+    </ion-list>
+
+    <button class="button button-positive" ng-click="selectTabWithIndex(1)">Select tab Chats!</button>
+    <!-- Disabling the tap system -->
+    <!-- <div data-tap-disabled="true">
+      <div id="google-map"></div>
+    </div> -->
+
+    <!-- ion-spinner test -->
+    <style>
+      /*Styling SVG with CSS*/
+      /*.spinner svg {
+        width: 28px;
+        height: 28px;
+        stroke: #444;
+        fill: #444;
+      }*/
+    </style>
+    <!-- <ion-spinner class="spinner-energized" icon="android"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="ios"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="ios-small"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="bubbles"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="circles"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="crescent"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="dots"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="lines"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="ripple"></ion-spinner>
+    <ion-spinner class="spinner-energized" icon="spiral"></ion-spinner> -->
+
+    <!-- $ionicPopup test -->
+    <button class="button button-positive" ng-click="showPopup()">showPopup</button>
+    <button class="button button-calm" ng-click="showAlert()">alertPopup</button>
+    <button class="button button-energized" ng-click="showConfirm()">confirmPopup</button>
+
+    <!-- $ionicPopover test 50% -->
+    <p>
+      <button class="button button-energized" ng-click="openPopover($event)">Open Popover</button>
+    </p>
+
+    <script id="my-popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-header-bar>
+          <h1 class="title">My Popover Title</h1>
+        </ion-header-bar>
+        <ion-content>
+          Hello!
+        </ion-content>
+      </ion-popover-view>
+    </script>
+    <!-- $ionicPopover test end -->
+
+    <!-- // $ionicModal test 50% -->
+    <script id="my-modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar>
+          <h1 class="title">My Modal title</h1>
+        </ion-header-bar>
+        <ion-content>
+          Hello!
+        </ion-content>
+      </ion-modal-view>
+    </script>
+    <button class="button button-positive" ng-click="openModal()">test openModal</button>
+    <button class="button button-calm" ng-click="closeModal()">test closeModal</button>
+    <!-- $ionicModal test end -->
+
+    <button class="button button-positive" ng-click="show()">test action sheet</button>
+    <button class="button button-calm" ng-click="action()">test backdrop</button>
+    <button class="button button-energized" ng-click="showLoading()">test ionicLoading</button>
+    <button class="button button-energized" ng-click="showCustomLoading()">test ionicLoadingConfig</button>
+    <br>
+
+    <!-- gestures and events -->
+    <!-- Touch stays at the same location for 500ms. Similar to long touch events available for AngularJS and jQuery. -->
+    <button on-hold="onHold()" class="button">Test onHold</button>
+    <!-- Quick touch at a location. If the duration of the touch goes longer than 250ms it is no longer a tap gesture. -->
+    <button on-tap="onTap()" class="button">Test onTap</button>
+    <!-- Double tap touch at a location. -->
+    <button on-double-tap="onDoubleTap()" class="button">Test onDoubleTap</button>
+    <!-- Called immediately when the user first begins a touch. This gesture does not wait for a touchend/mouseup. -->
+    <button on-touch="onTouch()" class="button">Test onTouch</button>
+    <!-- Called when the user ends a touch. -->
+    <button on-release="onRelease()" class="button">Test onRelease</button>
+    <!-- Move with one touch around on the page. Blocking the scrolling when moving left and right is a good practice. When all the drag events are blocking you disable scrolling on that area. -->
+    <button on-drag="onDrag()" class="button">Test onDrag</button>
+    <!-- Called when the element is dragged up. -->
+    <button on-drag-up="onDragUp()" class="button">Test onDragUp</button>
+    <!-- Called when the element is dragged to the right. -->
+    <button on-drag-right="onDragRight()" class="button">Test onDragRight</button>
+    <!-- Called when the element is dragged down. -->
+    <button on-drag-down="onDragDown()" class="button">Test onDragDown</button>
+    <!-- Called when the element is dragged to the left. -->
+    <button on-drag-left="onDragLeft()" class="button">Test onDragLeft</button>
+    <!-- Called when a moving touch has a high velocity in any direction. -->
+    <button on-swipe="onSwipe()" class="button">Test onSwipe</button>
+    <!-- Called when a moving touch has a high velocity moving up. -->
+    <button on-swipe-up="onSwipeUp()" class="button">Test onSwipeUp</button>
+    <!-- Called when a moving touch has a high velocity moving to the right. -->
+    <button on-swipe-right="onSwipeRight()" class="button">Test onSwipeRight</button>
+    <!-- Called when a moving touch has a high velocity moving down. -->
+    <button on-swipe-down="onSwipeDown()" class="button">Test onSwipeDown</button>
+    <!-- Called when a moving touch has a high velocity moving to the left. -->
+    <button on-swipe-left="onSwipeLeft()" class="button">Test onSwipeLeft</button>
+
+
+  </ion-content>
+
+</ion-view>

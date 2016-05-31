@@ -1,0 +1,66 @@
+<label class="toggle">
+   <input type="checkbox">
+   <div class="track">
+     <div class="handle"></div>
+   </div>
+</label>
+
+<ul class="list">
+  <li class="item item-toggle">
+     HTML5
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+</ul>
+
+<!-- check box -->
+<ion-list>
+
+  <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+  <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+  <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+
+</ion-list>
+
+<!-- radio button list -->
+<ion-list>
+  <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+  <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+</ion-list>
+
+<!-- range -->
+<div class="item range">
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+
+<div class="list">
+  <div class="item range range-positive">
+    <i class="icon ion-ios-sunny-outline"></i>
+    <input type="range" name="volume" min="0" max="100" value="33">
+    <i class="icon ion-ios-sunny"></i>
+  </div>
+</div>
+
+<!-- select -->
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Lightsaber
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+
+</div>
+
+

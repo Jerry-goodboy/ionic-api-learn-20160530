@@ -1,0 +1,44 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="Account" badge=5 badge-style='badge-positive' icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+
+  <!-- ion-tab test 20160530 -->
+  <!-- <ion-tab
+    title="Tab!" The title of the tab.
+    href="#/tab/tab-link" The link that this tab will navigate to when tapped.
+    icon="my-icon" The icon of the tab. If given, this will become the default for icon-on and icon-off.
+    icon-on="my-icon-on" The icon of the tab while it is selected.
+    icon-off="my-icon-off" The icon of the tab while it is not selected.
+    badge=5 The badge to put on this tab (usually a number).
+    badge-style='badge-positive' The style of badge to put on this tab (eg: badge-positive).
+    ng-click=function(){} Called when this tab is selected.
+    on-select="onTabSelected()" Called when this tab is deselected.
+    on-deselect="onTabDeselected()" By default, the tab will be selected on click.
+                                    If ngClick is set, it will not.
+                                    You can explicitly switch tabs using $ionicTabsDelegate.select().
+    hidden='' Whether the tab is to be hidden or not.
+    disabled='' Whether the tab is to be disabled or not.>
+  </ion-tab> -->
+
+
+</ion-tabs>
+
+

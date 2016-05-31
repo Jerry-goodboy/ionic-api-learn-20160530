@@ -1,0 +1,250 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+    </ion-list>
+
+    <div class="row">
+	  <div class="col col-50">.col.col-50</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col col-75">.col.col-75</div>
+	  <div class="col">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col">.col</div>
+	  <div class="col col-75">.col.col-75</div>
+	</div>
+
+	<div class="row">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+
+    <div class="row">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+
+    <div class="tabs tabs-icon-top">
+	  <a class="tab-item">
+	    <i class="icon ion-home"></i>
+	    Home
+	  </a>
+	  <a class="tab-item">
+	    <i class="icon ion-star"></i>
+	    Favorites
+	  </a>
+	  <a class="tab-item">
+	    <i class="icon ion-gear-a"></i>
+	    Settings
+	  </a>
+	</div>
+
+    <div class="tabs">
+	  <a class="tab-item">
+	    Home
+	  </a>
+	  <a class="tab-item">
+	    Favorites
+	  </a>
+	  <a class="tab-item">
+	    Settings
+	  </a>
+	</div>
+
+    <div class="list">
+
+	  <label class="item item-input item-select">
+	    <div class="input-label">
+	      Lightsaber
+	    </div>
+	    <select>
+	      <option>Blue</option>
+	      <option selected>Green</option>
+	      <option>Red</option>
+	    </select>
+	  </label>
+
+	</div>
+
+    <div class="item range">
+	  <i class="icon ion-volume-low"></i>
+	  <input type="range" name="volume">
+	  <i class="icon ion-volume-high"></i>
+	</div>
+
+	<div class="list">
+	  <div class="item range range-positive">
+	    <i class="icon ion-ios-sunny-outline"></i>
+	    <input type="range" name="volume" min="0" max="100" value="33">
+	    <i class="icon ion-ios-sunny"></i>
+	  </div>
+	</div>
+
+    <ion-list>
+	  <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+	  <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+	</ion-list>
+
+    <ion-list>
+
+	  <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+	  <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+	  <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+
+	</ion-list>
+
+    <ul class="list">
+	  <li class="item item-toggle">
+	     HTML5
+	     <label class="toggle toggle-assertive">
+	       <input type="checkbox">
+	       <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+	  </li>
+	</ul>
+
+    <label class="toggle">
+	   <input type="checkbox">
+	   <div class="track">
+	     <div class="handle"></div>
+	   </div>
+	</label>
+
+    <div class="bar bar-header item-input-inset">
+	  <label class="item-input-wrapper">
+	    <i class="icon ion-ios-search placeholder-icon"></i>
+	    <input type="search" placeholder="Search">
+	  </label>
+	  <button class="button button-clear">
+	    Cancel
+	  </button>
+	</div>
+
+    <div class="list list-inset">
+	  <label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input type="text" placeholder="Search">
+	  </label>
+	</div>
+
+    <div class="list">
+
+	  <div class="item item-input-inset">
+	    <label class="item-input-wrapper">
+	      <input type="text" placeholder="Email">
+	    </label>
+	    <button class="button button-small">
+	      Submit
+	    </button>
+	  </div>
+
+	</div>
+
+    <div class="card">
+	  <label class="item item-input">
+	    <input type="text" placeholder="First Name">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Last Name">
+	  </label>
+	</div>
+
+    <div class="list list-inset">
+	  <label class="item item-input">
+	    <input type="text" placeholder="First Name">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Last Name">
+	  </label>
+	</div>
+
+    <div class="list">
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">First Name</span>
+	    <input type="text" placeholder="First Name">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Last Name</span>
+	    <input type="text" placeholder="Last Name">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Email</span>
+	    <input type="text" placeholder="Email">
+	  </label>
+	</div>
+
+    <div class="list">
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">First Name</span>
+	    <input type="text" placeholder="John">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Last Name</span>
+	    <input type="text" placeholder="Suhr">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Email</span>
+	    <input type="text" placeholder="john@suhr.com">
+	  </label>
+	</div>
+
+    <div class="list">
+	  <label class="item item-input">
+	    <span class="input-label">Username</span>
+	    <input type="text">
+	  </label>
+	  <label class="item item-input">
+	    <span class="input-label">Password</span>
+	    <input type="password">
+	  </label>
+	</div>
+
+    <div class="list">
+    	<label class="item item-input">
+    		<input type="text" placeholder="First Name">
+    	</label>
+    	<label class="item item-input">
+    		<input type="text" placeholder="Last Name">
+    	</label>
+    	<label class="item item-input">
+    		<textarea placeholder="Comments"></textarea>
+    	</label>
+    </div>
+
+    <div class="list card">
+
+    	<div class="item item-avatar">
+    		<img src="img/adam.jpg">
+    		<h2>Marty McFly</h2>
+    		<p>November 05, 1955</p>
+    	</div>
+
+    	<div class="item item-body">
+    		<img class="full-image" src="img/adam.jpg">
+    		<p>
+    			This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+    			the content is from a card-body consisting of an image and paragraph text. The footer
+    			consists of tabs, icons aligned left, within the card-footer.
+    		</p>
+    		<p>
+    			<a href="#" class="subdued">1 Like</a>
+    			<a href="#" class="subdued">5 Comments</a>
+    		</p>
+    	</div>
+
+    </div>
+  </ion-content>
+</ion-view>
