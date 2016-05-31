@@ -33,6 +33,63 @@
       </div>
     </div> -->
 
+    <!-- ion-list test 2016.05.31 -->
+    <ion-list>
+      <ion-item ng-repeat="item in itemsArr">
+        Hello, {{item}}!
+      </ion-item>
+    </ion-list>
+
+    <!-- $ionicListDelegate test -->
+    <button class="button button-positive" ng-click="listData.showDeleteButtons()">show list DeleteButtons</button>
+
+    <!--
+      ion-list Advanced Usage:
+      Thumbnails, Delete buttons, Reordering, Swiping
+    -->
+    <ion-list show-delete="listData.shouldShowDelete"
+              show-reorder="listData.shouldShowReorder"
+              can-swipe="listData.listCanSwipe">
+      <ion-item ng-repeat="item in listData.listItems"
+                class="item-thumbnail-left">
+        <!-- collection-repeat instead of ng-repeat -->
+
+        <img ng-src="{{item.img}}">
+        <!-- Grid of Images -->
+        <!-- <img collection-repeat="photo in photos"
+             item-width="33%"
+             item-height="200px"
+             ng-src="{{photo.url}}"> -->
+        <!-- Horizontal Scroller, Dynamic Item Width -->
+        <!-- <ion-scroll direction="x" class="available-scroller">
+          <div class="photo" collection-repeat="photo in main.photos"
+             item-height="250" item-width="photo.width + 30">
+             <img ng-src="{{photo.src}}">
+          </div>
+        </ion-scroll> -->
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+        <ion-option-button class="button-positive"
+                           ng-click="listData.share(item)">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-info"
+                           ng-click="listData.edit(item)">
+          Edit
+        </ion-option-button>
+        <ion-delete-button class="ion-minus-circled"
+                           ng-click="listData.deleteItem(item)">
+        </ion-delete-button>
+        <ion-reorder-button class="ion-navicon"
+                            on-reorder="listData.reorderItem(item, $fromIndex, $toIndex)">
+        </ion-reorder-button>
+        <!-- <ion-toggle ng-model="listData.shouldShowDelete">
+          Show Delete?
+        </ion-toggle> -->
+
+      </ion-item>
+    </ion-list>
+
     <!-- input types -->
     <!-- text input -->
     <label class="item item-input">

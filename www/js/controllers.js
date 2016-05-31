@@ -86,7 +86,54 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $ionicActionSheet, $ionicBackdrop, $ionicLoading, $ionicPopover,
                                 $ionicModal, $ionicPopup, $ionicTabsDelegate, $ionicNavBarDelegate,
-                                $ionicHistory, $timeout, $rootScope, $http) {
+                                $ionicHistory, $ionicListDelegate, $timeout, $rootScope, $http) {
+  // ion-list test 2016.05.31
+  $scope.listData = {
+    listItems:[
+      {
+        img:'img/adam.jpg',
+        title:'adam',
+        description:'adam\'s pics'
+      },
+      {
+        img:'img/ben.png',
+        title:'ben',
+        description:'ben\'s pics'
+      },
+      {
+        img:'img/mike.png',
+        title:'mike',
+        description:'mike\'s pics'
+      }
+    ],
+    shouldShowDelete: false,
+    shouldShowReorder: false,
+    listCanSwipe: true,
+    share: function (item) {
+      console.log(item);
+    },
+    edit: function (item) {
+      console.log(item);
+    },
+    reorderItem: function(item, fromIndex, toIndex) {
+      $scope.listData.listItems.splice(fromIndex, 1);
+      $scope.listData.listItems.splice(toIndex, 0, item);
+    },
+    deleteItem: function(item) {
+      $scope.listData.listItems.splice($scope.listData.listItems.indexOf(item), 1);
+    },
+    // $ionicListDelegate test
+    showDeleteButtons: function() {
+      $ionicListDelegate
+      // .showDelete(true)
+      // .showReorder([showReorder])
+      // .canSwipeItems([canSwipeItems])
+      .closeOptionButtons()
+      // .$getByHandle(handle)
+      ;
+    }
+  };
+
   // action sheet test 2016.05.29
   // Triggered on a button click, or some other target
  $scope.show = function() {
